@@ -106,10 +106,9 @@ function _odoogitclone() {
         sudo mkdir -p --mode=g+w /usr/share/$PROJECT
         sudo chown odoo:odoo /usr/share/$PROJECT
 	echo "Trying to clone from github"
-        if git clone -b 14.0 git@github.com:vertelab/$PROJECT.git ; then
-	    echo "Trying to clone from git.vertel.se"
-	    git clone -b 14.0 git@git.vertel.se:vertelab/$PROJECT.git
-	fi
+	git clone -b 14.0 git@github.com:vertelab/$PROJECT.git
+	echo "Trying to clone from git.vertel.se"
+	git clone -b 14.0 git@git.vertel.se:vertelab/$PROJECT.git
     done
     cd $CWD
 }
